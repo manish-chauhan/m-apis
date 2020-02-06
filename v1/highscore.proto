@@ -4,7 +4,7 @@ package m.highscore.v1;
 option go_package = "game";
 
 service Game{
-    rpc SetHighScore(SetHighScoreRequest) returns (SetHighScoreRespone);
+    rpc SetHighScore(SetHighScoreRequest) returns (SetHighScoreResponse);
     rpc GetHighScore(GetHighScoreRequest) returns (GetHighScoreRespone);
 }
 
@@ -12,7 +12,7 @@ message SetHighScoreRequest {
     double high_score = 1;
 }
 
-message SetHighScoreRespone {
+message SetHighScoreResponse {
     bool set = 1;
 }
 
